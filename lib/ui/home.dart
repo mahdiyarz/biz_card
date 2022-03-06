@@ -13,8 +13,11 @@ class BizCard extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         child: Stack(
-          alignment: Alignment.center,
-          children: [_getCard()],
+          alignment: Alignment.topCenter,
+          children: [
+            _getCard(),
+            _getAvatar(),
+          ],
         ),
       ),
     );
@@ -24,6 +27,7 @@ class BizCard extends StatelessWidget {
     return Container(
       width: 300,
       height: 200,
+      margin: const EdgeInsets.all(50),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.deepOrangeAccent,
@@ -48,6 +52,24 @@ class BizCard extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Container _getAvatar() {
+    return Container(
+      width: 100,
+      height: 100,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        border: Border.all(
+          color: Colors.deepOrangeAccent,
+          width: 2,
+        ),
+        image: const DecorationImage(
+          image: NetworkImage("https://picsum.photos/300/300"),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
