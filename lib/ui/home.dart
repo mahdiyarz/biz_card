@@ -7,11 +7,13 @@ class BizCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepOrange,
         title: const Text("Biz Card"),
         centerTitle: true,
       ),
       body: Container(
         alignment: Alignment.center,
+        color: Colors.grey,
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
@@ -38,17 +40,22 @@ class BizCard extends StatelessWidget {
           const Text(
             "mahDyar ArbabZ",
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 25,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),
           ),
-          const Text("m.arbabzi@gmail.com"),
+          const Text(
+            "m.arbabzi@gmail.com",
+            style: TextStyle(
+              fontSize: 15,
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Icon(Icons.location_history),
-              Text("Tiwter: @mahdiyarz")
+              Icon(Icons.contact_phone),
+              Text("+98 939-154-3702"),
             ],
           ),
         ],
